@@ -6,4 +6,7 @@ Nice features:
 - right click to add a property in the blocks
 - indication of syntax error in Json editor
 
+Note: 
+- layout of the json is not preserved
+- layout of the blocks and ids of blocks are not preserved
 
