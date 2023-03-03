@@ -1,0 +1,24 @@
+{
+  "name": "json-blockly",
+  "version": "1.0.0",
+  "description": "The block based code editor for Json.",
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "author": "Preet Vadaliya",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "deploy": "firebase deploy --only hosting"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "blockly": "^9.2.1",
+    "json-to-ast": "^2.1.0"
+  }
+}

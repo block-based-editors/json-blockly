@@ -1,0 +1,109 @@
+/* Playground CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.title-bar {
+  height: 56px;
+  padding: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.app-bar {
+  height: 56px;
+  padding: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.app-bar .left {
+  flex: 1;
+}
+
+.app-bar .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playground-area {
+  flex: 1;
+  display: flex;
+}
+
+.blockly-area {
+  flex: 7;
+  display: flex;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.toolbox-area {
+  width: 56px;
+  padding: 8px;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  display: none;
+}
+
+.workspace-area {
+  flex: 1;
+}
+
+#workspace {
+  position: absolute !important;
+}
+
+.code-area {
+  flex: 3;
+}
+
+button {
+  padding: 8px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: 'Varela Round';
+  margin-right: 16px;
+}
+
+button:hover  {
+  background-color: #212121;
+  color: white;
+  cursor: pointer;
+}
+
+/* override blockly css */
+/* CSS for override the defualt style of Blockly. */
+
+.blocklyMainBackground {
+  stroke-width: 0 !important;
+}
+
+.blocklyScrollbarHandle {
+  display: none !important;
+}
+
+.blocklyTrash,
+.blocklyZoom > image,
+.blocklyZoom > svg > image {
+  opacity: 1 !important;
+}

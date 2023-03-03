@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockly JSON</title>
+    <link rel="stylesheet" href="./style/playground.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ace-builds@1.15.2/css/ace.min.css"
+    />
+  </head>
+  <body>
+    <div class="title-bar"></div>
+    <div class="app-bar">
+      <div class="left"></div>
+      <div class="right">
+        <button id="code-download">Download Json</button>
+        <button id="block-download">Download Blocks</button>
+        <button id="code-to-block">Block To Code</button>
+      </div>
+    </div>
+    <div class="playground-area">
+      <div class="blockly-area">
+        <div class="toolbox-area"></div>
+        <div class="workspace-area" id="workspace-area">
+          <div id="workspace"></div>
+        </div>
+      </div>
+      <div class="code-area">
+        <div id="editor" style="height: 100%"></div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js"
+      integrity="sha512-NSbvq6xPdfFIa2wwSh8vtsPL7AyYAYRAUWRDCqFH34kYIjQ4M7H2POiULf3CH11TRcq3Ww6FZDdLZ8msYhMxjg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const editor = ace.edit('editor');
+      editor.setOptions({
+        mode: 'ace/mode/json',
+        selectionStyle: 'text',
+        highlightActiveLine: true,
+        highlightSelectedWord: true,
+        readOnly: false,
+        cursorStyle: 'ace',
+        showPrintMargin: false,
+        fontSize: '16pt',
+      });
+      editor.setValue('', -1);
+    </script>
+    <script src="javascript/blockly.bundle.js"></script>
+  </body>
+</html>
